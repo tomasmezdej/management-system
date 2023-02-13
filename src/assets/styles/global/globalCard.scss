@@ -1,0 +1,12 @@
+.global-card {
+  background-image: url('../../images/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  // padding: 50px;
+  transition: 1s;
+  overflow-y: hidden;
+  .default-layout {
+    border-radius: 25px;
+  }
+}
