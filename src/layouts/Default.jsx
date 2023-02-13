@@ -7,7 +7,7 @@ import GlobalCard from "../components/global/GlobalCard";
 import { useState } from "react"
 
 const Default = () => {
-  const [cardMode, setCardMode] = useState(false)
+  const [cardMode, setCardMode] = useState(true)
 
   const handelClick = () => {
     setCardMode((prevState) => {
@@ -31,13 +31,14 @@ const Default = () => {
     outletHeight: ['100vh', '100vh', '100vh','100vh']
   }
   const cardModePadding = {
-    padding: cardMode ? "70px 120px" : "0px"
+    padding: cardMode ? "4vh 6vw" : "0px"
   }
   const cardModeBorderRadius = {
-    borderRadius: cardMode ? "25px" : "0px"
+    borderRadius: cardMode ? "25px" : "0px",
+    backgroundColor: cardMode && "#E1ECEB"
   }
   const cardModeNavBorderRadius = {
-    borderRadius: cardMode ? "25px" : "0px 25px 25px 0px"
+    borderRadius: cardMode ? "25px" : "0px 25px 25px 0px",
   }
 
   return (
@@ -47,7 +48,7 @@ const Default = () => {
         className="global-card__floating_button"
         onClick={handelClick}
       >
-        Toggle Card mode
+        Toggle { cardMode ? "off" : "on" } Card mode
       </Button>
       <GlobalCard
         style={cardModePadding}

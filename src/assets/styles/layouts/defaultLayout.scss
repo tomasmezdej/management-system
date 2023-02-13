@@ -1,13 +1,14 @@
-.default-layout {/*
-  background-image: url('../../images/background.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow-y: hidden; */
+.default-layout {
   transition: 1s;
-  background-color: #E1ECEB;
 }
 .global-card__floating_button {
   position: fixed !important;
   right: 0;
   top: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .global-card__floating_button {
+    display: none !important;
+  }
 }
