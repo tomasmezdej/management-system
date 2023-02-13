@@ -1,4 +1,10 @@
 .home-page {
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
+  padding-bottom: 100px;
+}
+
+.home-page::-webkit-scrollbar {
+  width: 12px;
 }

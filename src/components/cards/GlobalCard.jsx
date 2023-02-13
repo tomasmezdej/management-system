@@ -1,4 +1,4 @@
-import "../../assets/styles/global/globalCard.scss"
+import "../../assets/styles/cards/globalCard.scss"
 
 const GlobalCard = (props) => {
   const className = `global-card ${props.className}`

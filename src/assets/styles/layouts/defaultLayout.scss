@@ -1,5 +1,7 @@
+
 .default-layout {
   transition: 1s;
+  overflow-y: hidden;
 }
 .global-card__floating_button {
   position: fixed !important;
@@ -11,4 +13,7 @@
   .global-card__floating_button {
     display: none !important;
   }
+}
+.outlet {
+
 }

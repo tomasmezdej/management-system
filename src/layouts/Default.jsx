@@ -3,7 +3,7 @@ import {Outlet} from "react-router-dom";
 import { Box, Flex, Button } from '@chakra-ui/react'
 import NavBar from "../components/global/NavBar";
 import "../assets/styles/layouts/defaultLayout.scss"
-import GlobalCard from "../components/global/GlobalCard";
+import GlobalCard from "../components/cards/GlobalCard";
 import { useState } from "react"
 
 const Default = () => {
@@ -35,7 +35,8 @@ const Default = () => {
   }
   const cardModeBorderRadius = {
     borderRadius: cardMode ? "25px" : "0px",
-    backgroundColor: cardMode && "#E1ECEB"
+    backgroundColor: "#E1ECEB"
+    //backgroundColor: cardMode && "#E1ECEB"
   }
   const cardModeNavBorderRadius = {
     borderRadius: cardMode ? "25px" : "0px 25px 25px 0px",
@@ -71,7 +72,7 @@ const Default = () => {
               w={outlet.outletWidth}
               h={outlet.outletHeight}
             >
-                <Outlet />
+              <Outlet />
             </Box>
         </Flex>
       </GlobalCard>

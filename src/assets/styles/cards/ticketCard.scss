@@ -1,0 +1,66 @@
+@import "../variables.scss";
+
+.ticket-card {
+  position: relative;
+  overflow: hidden;
+  .ticket-card__content {
+    color: $text-color;
+    padding: 40px 20px;
+    h2 {
+      font-weight: bold;
+      font-size: 23px;
+    }
+    small {
+      font-weight: 500;
+    }
+  }
+  background-color: #fff;
+
+  width: 640px;
+
+  border-radius: 20px;
+
+}
+.ticket-card__row {
+  padding: 20px 20px;
+  border-top: 2px dashed #E1ECEB;
+  h4 {
+    color: $text-color;
+    font-weight: 500;
+  }
+}
+.ticket-card__row_count {
+  border-radius: 100%;
+  background-color: #C99C33;
+  width: 50px;
+  height: 50px;
+  h4 {
+    color: white;
+  }
+}
+.ticket-card__row_divider_left {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #E1ECEB;
+  border-radius: 100%;
+  transform: translateY(-15px) translateX(-15px);
+}
+.ticket-card__row_divider_right {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #E1ECEB;
+  border-radius: 100%;
+  right: 0;
+  transform: translateY(-15px) translateX(15px);
+}
+.ticket-card__row_header {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  h4 {
+    color: $text-color;
+    font-weight: 500;
+  }
+}

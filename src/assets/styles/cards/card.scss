@@ -1,0 +1,35 @@
+.card {
+  padding: 40px 20px;
+  border-radius: 20px;
+  min-width: 300px;
+  position: relative;
+  transition: 0.4s;
+  h1 {
+    font-size: 25px;
+    font-weight: bolder;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  img {
+    transition: 0.4s;
+    position: absolute;
+    width: 250px;
+    right: -15px;
+    z-index: 100;
+    transform: rotate(-30deg) translateY(-10px);
+    filter: drop-shadow(3px 3px 4px #6c6c6c);
+  }
+  &:hover {
+    transform: scale(1.05);
+    img {
+      transform: rotate(-30deg) translateX(10px) translateY(10px);
+    }
+  }
+}
+.card_last {
+
+  background-image: url('../../images/mini-map.png');
+  background-repeat: no-repeat;
+  background-position: right;
+}

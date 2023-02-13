@@ -1,6 +1,8 @@
 import "../../assets/styles/pages/homePage.scss"
 import { Flex, Grid, GridItem } from "@chakra-ui/react"
-import Card from "../global/Card"
+import Card from "../cards/Card"
+import plane from "../../assets/images/plane.png"
+import TicketCard from "../cards/TicketCard/TicketCard"
 
 const Home = () => {
     const mainFlex = {
@@ -13,29 +15,39 @@ const Home = () => {
             <Flex
                 direction={mainFlex.direction}
                 p={mainFlex.padding}
+                justifyContent="start"
                 gap="10"
             >
-                <Flex direction="column" w="100%" >
-                    <Card backgroundColor="#C99C33">
-                        <h2>Boeing 787</h2>
-                        <h1>$548</h1>
-                    </Card>
-                </Flex>
-                <Flex direction="column" w="100%">
-                    <Card>
-                        <h2>Aitbus 811</h2>
-                        <h1>$620</h1>
-                    </Card>
+                <Card
+                    backgroundColor="#C99C33"
+                    img={plane}
+                >
+                    <h2>Boeing 787</h2>
+                    <h1>$548</h1>
+                </Card>
+                <Card
+                    img={plane}
+                >
+                    <h2>Airbus 811</h2>
+                    <h1>$620</h1>
+                </Card>
+                <Card
+                    className="card_last"
+                >
+                    <h2>Total Flights</h2>
+                    <h1>850</h1>
+                </Card>
 
-                </Flex>
-                <Flex direction="column" w="100%">
-                    <Card>
-                        <h2>Total Flights</h2>
-                        <h1>850</h1>
-                    </Card>
-
-                </Flex>
             </Flex>
+            <Flex
+                direction={mainFlex.direction}
+                p={mainFlex.padding}
+                justifyContent="start"
+                gap="10"
+            >
+                <TicketCard />
+            </Flex>
+
         </div>
     );
 }
