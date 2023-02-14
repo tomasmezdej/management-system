@@ -1,7 +1,7 @@
 
 import {Outlet} from "react-router-dom";
 import { Box, Flex, Button } from '@chakra-ui/react'
-import NavBar from "../components/global/NavBar";
+import NavBar from "../components/navbar/NavBar";
 import "../assets/styles/layouts/defaultLayout.scss"
 import GlobalCard from "../components/cards/GlobalCard";
 import { useState } from "react"

@@ -1,10 +1,11 @@
 @import "../variables.scss";
 
 .nav-bar {
-  background-color: $navbar-BackgroundColor;
+  // background-color: #425C5A;
+  position: relative;
   color: $navbar-TextColorLight;
   border-radius: 25px;
-  padding: 15px;
+  // padding: 15px;
   height: 100%;
   transition: 1s;
 }
@@ -13,4 +14,50 @@
   .nav-bar {
     border-radius: 0px !important;
   }
+}
+
+
+.navbar__title {
+  background-color: #3D5654;
+  border-radius: 25px 25px 0px 0px;
+  padding: 15px;
+  height: 40vh;
+}
+.navbar__element:not(.active) {
+  padding: 15px 10px;
+}
+.navbar__element {
+  cursor: pointer;
+  padding-left: 10px;
+  font-weight: 500;
+  border-radius: 0px;
+  background-color: #425C5A;
+  color: $navbar-TextColorLight;
+  gap: 15px;
+  .active {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 15px 10px;
+    align-content: center;
+    color: #3D5654;
+    background-color: #E1ECEB;
+    border-radius: 25px 0px 0px 25px;
+    // margin-left: 15px;
+  }
+
+}
+
+.navbar__element:has(+.navbar__element.active)  {
+  border-radius: 0px 0px 25px 0px;
+}
+.navbar__element.active + .navbar__element  {
+  border-radius: 0px 25px 0px 0px;
+}
+.navbar__spacer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #425C5A;
+  color: transparent;
 }

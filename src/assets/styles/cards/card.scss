@@ -1,5 +1,5 @@
 .card {
-  padding: 40px 20px;
+  padding: 25px 20px;
   border-radius: 20px;
   min-width: 300px;
   position: relative;
@@ -21,9 +21,9 @@
     filter: drop-shadow(3px 3px 4px #6c6c6c);
   }
   &:hover {
-    transform: scale(1.05);
+    // transform: scale(1.02);
     img {
-      transform: rotate(-30deg) translateX(10px) translateY(10px);
+      transform: rotate(-30deg) translateX(10px) translateY(-10px);
     }
   }
 }
