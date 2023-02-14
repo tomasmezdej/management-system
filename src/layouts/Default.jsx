@@ -1,6 +1,6 @@
 
 import {Outlet} from "react-router-dom";
-import { Box, Flex, Button } from '@chakra-ui/react'
+import { Box, Flex, Button, transition } from '@chakra-ui/react'
 import NavBar from "../components/navbar/NavBar";
 import "../assets/styles/layouts/defaultLayout.scss"
 import GlobalCard from "../components/cards/GlobalCard";
@@ -39,7 +39,11 @@ const Default = () => {
     //backgroundColor: cardMode && "#E1ECEB"
   }
   const cardModeNavBorderRadius = {
-    borderRadius: cardMode ? "25px" : "0px 25px 25px 0px",
+    title: {
+      borderRadius: cardMode ? "25px 25px 0px 0px" : "0px 25px 0px 0px",
+      transition: "1s"
+    },
+    borderRadius: "0px",
   }
 
   return (

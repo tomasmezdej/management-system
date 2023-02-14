@@ -1,6 +1,6 @@
-const NavBarTitle = () => {
+const NavBarTitle = (props) => {
   return (
-    <div className="navbar__title">
+    <div className="navbar__title" style={props.style}>
       im title
     </div>
   )

@@ -33,7 +33,9 @@ const NavBar = (props) => {
         direction="column"
         h="100%"
       >
-        <NavBarTitle />
+        <NavBarTitle
+          style={props.style.title}
+        />
         <NavBarElement
           identifier={0}
           selectedIdentifier={activeElement}

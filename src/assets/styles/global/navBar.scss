@@ -4,7 +4,7 @@
   // background-color: #425C5A;
   position: relative;
   color: $navbar-TextColorLight;
-  border-radius: 25px;
+  border-radius: 0px;
   // padding: 15px;
   height: 100%;
   transition: 1s;
@@ -19,7 +19,7 @@
 
 .navbar__title {
   background-color: #3D5654;
-  border-radius: 25px 25px 0px 0px;
+  // border-radius: 25px 25px 0px 0px;
   padding: 15px;
   height: 40vh;
 }
