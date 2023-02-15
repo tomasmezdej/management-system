@@ -3,6 +3,8 @@ import "../../assets/styles/global/navBar.scss"
 import NavBarElement from "./NavBarElement"
 import NavBarTitle from "./NavBarTitle"
 
+import ReactDom from "react-dom"
+
 import {
   GiFamilyHouse,
   GiCommercialAirplane,
@@ -18,23 +20,45 @@ import {
   IoMdSettings
 } from "react-icons/io"
 import { useState } from "react"
+import NavBarOverlay from "./NavBarOverlay"
 
 const NavBar = (props) => {
 
   const [activeElement, setActiveElement] = useState(0)
+  const [navBarState, setNavBarState] = useState(false)
 
   const handleChange = (identifier) => {
     setActiveElement(identifier)
+    setTimeout(() => {
+      setNavBarState(false)
+    }, 200);
   }
 
+  const handleHamburgerClick = () => {
+    setNavBarState((prevState) => {
+      return !prevState
+    })
+  }
+
+  const navbarStyle = {
+    ...props.style,
+    // height: navBarState ? "auto" : ""
+  }
+
+  const navbarClass = `nav-bar ${navBarState ? "nav-bar__open" : "nav-bar__close"}`
+
   return (
-    <div className="nav-bar" style={props.style}>
+    <div className={navbarClass} style={navbarStyle}>
+      {
+        navBarState && <NavBarOverlay />
+      }
       <Flex
         direction="column"
         h="100%"
       >
         <NavBarTitle
           style={props.style.title}
+          onHandleHamburgerClick={handleHamburgerClick}
         />
         <NavBarElement
           identifier={0}
