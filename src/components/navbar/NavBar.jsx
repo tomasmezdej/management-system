@@ -3,8 +3,6 @@ import "../../assets/styles/global/navBar.scss"
 import NavBarElement from "./NavBarElement"
 import NavBarTitle from "./NavBarTitle"
 
-import ReactDom from "react-dom"
-
 import {
   GiFamilyHouse,
   GiCommercialAirplane,

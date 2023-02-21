@@ -6,5 +6,11 @@
 }
 
 .home-page::-webkit-scrollbar {
-  width: 12px;
+  width: 0px;
+}
+
+@media only screen and (max-width: 479px) {
+  .home-page {
+    overflow-x: hidden;
+  }
 }

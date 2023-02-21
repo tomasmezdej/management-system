@@ -10,7 +10,15 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DoughnutChart = (props) => {
 
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    aspectRatio: 1
+
+  };
+
   const [chartData, setChartData] = useState({
+    maintainAspectRatio: false,
     // labels: Data.map((data) => data.year),
     datasets: [
       {
@@ -33,14 +41,7 @@ const DoughnutChart = (props) => {
       <div className="chart">
         <Doughnut
           data={chartData}
-          options={{
-            plugins: {
-              title: {
-                /* display: true,
-                text: "Users Gained between 2016-2020" */
-              }
-            }
-          }}
+          options={options}
         />
       </div>
     </div>

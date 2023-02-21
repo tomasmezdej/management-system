@@ -2,25 +2,31 @@ import { Flex, Icon } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 
 const NavBarElement = (props) => {
+  const {
+    identifier,
+    selectedIdentifier,
+    icon,
+    title,
+  } = props
 
-  const [className, setClassName] = useState(props.identifier === props.selectedIdentifier ? "active" : "")
+  const [className, setClassName] = useState(identifier === selectedIdentifier ? "active" : "")
 
   useEffect(() => {
-   setClassName(props.identifier === props.selectedIdentifier ? "active" : "")
-  },[props.selectedIdentifier])
+   setClassName(identifier === selectedIdentifier ? "active" : "")
+  },[identifier ,selectedIdentifier])
 
   const handleMouseOver = () => {
-    if (props.identifier !== props.selectedIdentifier) {
+    if (identifier !== selectedIdentifier) {
       setClassName('active')
     }
   }
   const handleMouseOut = () => {
-    if (props.identifier !== props.selectedIdentifier) {
+    if (identifier !== selectedIdentifier) {
       setClassName('')
     }
   }
   const handleClick = () => {
-    props.onClick(props.identifier)
+    props.onClick(identifier)
   }
   return (
     <Flex
@@ -31,11 +37,11 @@ const NavBarElement = (props) => {
     >
       <Flex px={2} gap={3} className={className}>
         <Icon
-          as={props.icon}
+          as={icon}
           boxSize={6}
           color="#BA9537"
         />
-        { props.title }
+        { title }
       </Flex>
     </Flex>
   )

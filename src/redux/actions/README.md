@@ -1,0 +1,1 @@
+Actions describes what happened in the application

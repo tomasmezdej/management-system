@@ -1,0 +1,1 @@
+In reducers we are describing how to react to action

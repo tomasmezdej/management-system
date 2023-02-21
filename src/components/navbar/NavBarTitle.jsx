@@ -1,7 +1,19 @@
 import { Flex } from "@chakra-ui/react"
 import { GiHamburgerMenu } from "react-icons/gi"
 
-const NavBarTitle = (props) => {
+/* import { modeCard } from "../../store/actions/modeCard";
+import { modeFullscreen } from "../../store/actions/modeFullscreen"; */
+
+const NavBarTitle = (props) => {/*
+
+  const mapStateToProps = state => ({
+    ...state
+  });
+
+  const mapDispatchToProps = dispatch => ({
+    startAction: () => dispatch(modeCard),
+    stopAction: () => dispatch(modeFullscreen)
+  }); */
 
   const handleHamburgerClick = () => {
     props.onHandleHamburgerClick()

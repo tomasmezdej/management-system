@@ -6,9 +6,8 @@ import Default from "./layouts/Default"
 import LoginPage from "./pages/LoginPage";
 import NotLoggedIn from "./layouts/NotLoggedIn";
 
-// import { theme } from "./config/chakraColorThemes"
-
 function App() {
+
   return (
     <ChakraProvider>
       <BrowserRouter>
@@ -25,5 +24,6 @@ function App() {
   );
 }
 
-export default App;
+
+export default (App);
 

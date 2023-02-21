@@ -32,6 +32,7 @@ ChartJS.register(
 
 const options = {
   responsive: true,
+  maintainAspectRatio: false,
   scales: {
     x: {
       border: {

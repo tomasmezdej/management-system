@@ -36,6 +36,7 @@ TO DO
 
 const options = {
   responsive: true,
+  maintainAspectRatio: false,
   scales: {
     x: {
       border: {
