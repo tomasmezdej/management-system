@@ -30,6 +30,11 @@
     font-weight: 500;
   }
 }
+.ticket-card__row_mobile_info {
+  .icon {
+    display: none;
+  }
+}
 .ticket-card__row_count {
   border-radius: 100%;
   background-color: #C99C33;
@@ -37,6 +42,9 @@
   height: 50px;
   h4 {
     color: white;
+  }
+  .icon {
+    display: none;
   }
 }
 .ticket-card__row_divider_left {
@@ -63,5 +71,39 @@
   h4 {
     color: $text-color;
     font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .ticket-card__row_header {
+    display: none;
+  }
+  .ticket-card__row_count {
+    border-radius: 100px;
+    background-color: #C99C33;
+    width: 100%;
+    padding: 0px 10px;
+    height: 50px;
+    .icon {
+      display: block;
+      color: #E1ECEB;
+    }
+  }
+  .ticket-card__row_mobile_info {
+    display: flex;
+    align-items: center;
+    flex-direction: row !important;
+    border-radius: 100px;
+    background-color: #C99C33;
+    width: 100%;
+    padding: 0px 10px;
+    height: 50px;
+    .icon {
+      display: block;
+      color: #E1ECEB;
+    }
+    h4 {
+    color: #DEE2E2;
+    }
   }
 }
