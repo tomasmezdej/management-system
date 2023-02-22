@@ -1,4 +1,3 @@
-import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import { useState } from "react";
@@ -16,7 +15,7 @@ const DoughnutChart = (props) => {
 
   };
 
-  const [chartData, setChartData] = useState({
+  const [chartData/* , setChartData */] = useState({
     maintainAspectRatio: false,
     // labels: Data.map((data) => data.year),
     datasets: [

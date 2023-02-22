@@ -1,5 +1,5 @@
 
-import { Avatar, Flex, HStack, Spacer, Box, Icon } from "@chakra-ui/react"
+import { Avatar, Flex, Spacer, Box, Icon } from "@chakra-ui/react"
 import {
   GiCommercialAirplane
 } from "react-icons/gi"

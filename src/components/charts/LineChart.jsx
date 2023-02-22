@@ -12,7 +12,7 @@ import {
 } from 'chart.js';
 import { Line } from "react-chartjs-2";
 import { useState } from "react";
-import { lineData } from "../../utils/chartData";
+/* import { lineData } from "../../utils/chartData"; */
 import { faker } from '@faker-js/faker';
 
 import "../../assets/styles/charts/Line.scss"
@@ -76,7 +76,7 @@ const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
 const LineChart = (props) => {
 
-  const [chartData, setChartData] = useState({
+  const [chartData/* , setChartData */] = useState({
     labels,
     datasets: [
       {
