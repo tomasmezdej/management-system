@@ -1,7 +1,11 @@
+.default-layout__wrap {
+  background-color: olive !important;
+}
 
 .default-layout {
   transition: 1s;
-  overflow-y: hidden;
+  overflow-y: hidden !important;
+  height: 100vh;
 }
 .global-card__floating_button {
   position: fixed !important;
@@ -14,7 +18,8 @@
     display: none !important;
   }
 }
-
-.outlet {
-
+@media only screen and (max-width: 479px) {
+  .outlet__wrap {
+    margin-top: 70px;
+  }
 }

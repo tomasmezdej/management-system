@@ -76,19 +76,28 @@
   background-color: #425C5A;
   color: transparent;
 }
+.navbar__hamburger_wrap {
+  display: none !important;
+}
 .navbar__hamburger {
   display: none;
 }
 .navbar__title_avatar_mobile {
-  display: none;
+  display: none !important;
 }
-
+.navbar__title_avatar_mobile_hidden {
+  display: flex !important;
+}
 @media only screen and (max-width: 479px) {
+  .navbar__wrap {
+    position: fixed;
+    z-index: 999;
+  }
   .navbar__title_avatar_mobile_hidden {
     display: none !important;
   }
   .navbar__title_avatar_mobile {
-    display: block;
+    display: flex !important;
   }
   .nav-bar__overlay {
     position: absolute;
@@ -98,6 +107,9 @@
     height: 100vh;
     background-color: rgba($color: #425C5A, $alpha: 0.4);
     z-index: 998 !important;
+  }
+  .navbar__hamburger_wrap {
+    display: flex !important;
   }
   .navbar__hamburger {
     display: block;

@@ -23,6 +23,7 @@ const NavBarTitle = (props) => {/*
     <Flex
       className="navbar__title"
       style={props.style}
+      justifyContent="center"
     >
       <WrapItem className="navbar__title_avatar_mobile" w="100%" alignItems="center" gap={2}>
         <Avatar size='sm' name='Christian Nwamba' src='https://bit.ly/code-beast' />{' '}
@@ -32,10 +33,8 @@ const NavBarTitle = (props) => {/*
       </WrapItem>
       <Flex
         className="navbar__title_avatar_mobile_hidden"
-        w="100%"
         alignItems="center"
         justifyContent="center"
-        bg="orange"
         direction="column"
       >
         <WrapItem className="navbar__title_avatar">
@@ -48,7 +47,7 @@ const NavBarTitle = (props) => {/*
           alex.johnson@gmail.com
         </h2>
       </Flex>
-      <WrapItem w="100%" justifyContent="flex-end">
+      <WrapItem w="100%" justifyContent="flex-end" className="navbar__hamburger_wrap">
         <GiHamburgerMenu
           className="navbar__hamburger"
           size={30}

@@ -25,7 +25,7 @@ const DefaultLayout = () => {
   // xs sm md lg
   const flex = {
     flexDirection: ['column','row','row','row'],
-    flexHeight: cardMode.payload ? ['90vh', '90vh', '90vh', '90vh'] : ['100vh', '100vh', '100vh', '100vh'],
+    flexHeight: cardMode.payload ? ['100vh', '90vh', '90vh', '90vh'] : ['100vh', '100vh', '100vh', '100vh'],
   }
   const nav = {
     navWidth: ["100%", "100%", "25%", "15%"],
@@ -49,8 +49,7 @@ const DefaultLayout = () => {
 
 
   return (
-    <>
-
+    <div className="default-layout__wrap">
       <Button
         variant="text"
         className="global-card__floating_button"
@@ -75,6 +74,7 @@ const DefaultLayout = () => {
             <Box
               w={nav.navWidth}
               h={nav.navHeight}
+              className="navbar__wrap"
             >
               <NavBar
                 style={cardModeNavBorderRadius}
@@ -84,12 +84,13 @@ const DefaultLayout = () => {
             <Box
               w={outlet.outletWidth}
               h={outlet.outletHeight}
+              className="outlet__wrap"
             >
               <Outlet />
             </Box>
         </Flex>
       </GlobalCard>
-    </>
+    </div>
   )
 }
 
