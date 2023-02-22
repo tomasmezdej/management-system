@@ -11,12 +11,33 @@
   z-index: 999;
 }
 
+.navbar__title_avatar {
+  outline: 2px solid $navbar-IconColor;
+  outline-offset: 5px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+}
+
 .navbar__title {
   background-color: #3D5654;
   // border-radius: 25px 25px 0px 0px;
   padding: 15px;
   height: 40vh;
 }
+
+.navbar__title_name {
+  font-size: large;
+  line-height: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $navbar-TextColorLight;
+}
+.navbar__title_email {
+  font-weight: 400;
+  font-size: small;
+  color: $navbar-TextColorLight;
+}
+
 .navbar__element:not(.active) {
   padding: 15px 10px;
 }
@@ -58,7 +79,17 @@
 .navbar__hamburger {
   display: none;
 }
+.navbar__title_avatar_mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 479px) {
+  .navbar__title_avatar_mobile_hidden {
+    display: none !important;
+  }
+  .navbar__title_avatar_mobile {
+    display: block;
+  }
   .nav-bar__overlay {
     position: absolute;
     top: 0;
@@ -88,6 +119,11 @@
     // border-radius: 25px 25px 0px 0px;
     padding: 20px 15px;
     padding-bottom: 30px;
+    .navbar__title_avatar,
+    .navbar__title_name,
+    .navbar__title_email {
+      display: none;
+    }
   }
   .navbar__spacer {
     /* padding-top: 10px;
