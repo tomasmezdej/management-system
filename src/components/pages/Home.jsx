@@ -5,11 +5,15 @@ import plane from "../../assets/images/plane.png"
 import TicketCard from "../cards/TicketCard/TicketCard"
 import StatisticsCard from "../cards/StatisticsCard"
 
+import { useSelector } from "react-redux"
+
 import DoughnutChart from "../charts/DoughnutChart"
 import LineChart from "../charts/LineChart"
 import BarChart from "../charts/BarChart"
 
 const Home = () => {
+
+    const cardMode = useSelector(state => state.cardMode)
 
     const mainFlex = {
         direction: ["column", "column", "column", "row"],

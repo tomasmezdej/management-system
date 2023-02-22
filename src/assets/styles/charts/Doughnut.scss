@@ -5,6 +5,9 @@
   justify-content: center;
   align-items: center;
   .chart {
-    width: 100%;
+    position: relative;
+    margin-left: 50%;
+    margin-right: 50%;
+    width: 80%;
   }
 }
